@@ -34,6 +34,7 @@ public class LoggerRegistry
     public static boolean __tileticklist;
     public static boolean __microtick;
     public static boolean __tileentitylist;
+    public static boolean __portalCaching;
 
     public static void initLoggers()
     {
@@ -66,7 +67,10 @@ public class LoggerRegistry
         registerLogger("microtick", new Logger("microtick", "all", new String[]{"all", "unique"}));
         
         //TISCM: add tile entity list
-        registerLogger("tileentitylist", new Logger("tileentitylist", null, null)); 
+        registerLogger("tileentitylist", new Logger("tileentitylist", null, null));
+    
+        //TISCM: add portal caching
+        registerLogger("portalCaching",new Logger("portalCaching", "brief", new String[]{"brief", "full"}));
     }
 
     /**
